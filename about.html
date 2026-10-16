@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Request Form</title>
+  <link rel="stylesheet" href="otherstyles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <p class="eyebrow">Commission Inquiry</p>
+    <h1>Art Request Form</h1>
+    <p class="subtitle">Tell me about your character, your vision, and your timeline.</p>
+  </header>
+
+  <nav class="top-links" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="#request-form">Request Form</a>
+  </nav>
+
+  <main class="form-container" id="request-form">
+    <form id="artRequestForm" class="art-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="character-name">Character Name</label>
+          <input id="character-name" name="character-name" type="text" placeholder="Character name" />
+        </div>
+
+        <div class="form-group">
+          <label for="art-type">Type of Art</label>
+          <select id="art-type" name="art-type">
+            <option value="">Choose one</option>
+            <option>Portrait</option>
+            <option>Full Body</option>
+            <option>Illustration</option>
+            <option>Icon / Avatar</option>
+            <option>Background</option>
+            <option>Reference Sheet</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="style">Art Style</label>
+          <select id="style" name="style">
+            <option value="">Select a style</option>
+            <option>Anime</option>
+            <option>Chibi</option>
+            <option>Realism</option>
+            <option>Cartoon</option>
+            <option>Minimal</option>
+            <option>Fantasy</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="deadline">Preferred Deadline</label>
+          <input id="deadline" name="deadline" type="date" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Character Details & Description</label>
+        <textarea id="description" name="description" rows="6" placeholder="Describe their appearance, outfit, pose, expression, colors, mood, and any details you want included..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="references">Reference Links</label>
+        <input id="references" name="references" type="url" placeholder="https://example.com/reference" />
+      </div>
+
+      <div class="form-group">
+        <label for="upload">Reference Images</label>
+        <input id="upload" name="upload" type="file" accept="image/*" />
+      </div>
+
+      <div class="form-group checkbox-row">
+        <input id="terms" name="terms" type="checkbox" required />
+        <label for="terms">I agree to share the details above and understand that pricing and timing may vary.</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Request</button>
+    </form>
+
+    <div id="successMessage" class="success-message" aria-live="polite" hidden>
+      Your art request has been sent. I’ll get back to you soon.
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('artRequestForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      successMessage.hidden = false;
+      form.reset();
+    });
+  </script>
+</body>
+</html>
+

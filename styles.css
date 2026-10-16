@@ -1,0 +1,57 @@
+.welcome {
+color: #fbc;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.welcome {
+  text-align: center;
+}
+
+.imagehere {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 0 20px;             
+}
+
+.spincat {
+  width: 300px;                  
+  height: auto;
+}
+
+.leboiilink {
+  text-align: center;
+  width: 100%;
+}
+
+.leboiilink a {
+  font-size: 34px;       
+  font-weight: bold;    
+}
+
+/* Sets the default color of the link */
+.leboiilink a {
+  color: pink;        /* Changes the text color (e.g., Orangered) */
+  text-decoration: none; /* Optional: Removes the default underline */
+}
+
+/* Changes the color when you hover over it */
+.leboiilink a:link {
+  color: magenta;        /* Color for unvisited links */
+}
+
+.leboiilink a:visited {
+  color: pink;        /* Color for links the user already clicked */
+}
+
+.leboiilink a:hover {
+  color: magenta;        /* Changes color on mouse hover (e.g., Gold) */
+  text-decoration: underline; /* Optional: Adds underline back on hover */
+}
+
+body {
+  background-color: black;
+  margin: 0;          /* Removes default browser margins around the edge of the page */
+  min-height: 100vh;  /* Ensures the black background fills the entire screen height */
+}
+
